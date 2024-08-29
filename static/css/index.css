@@ -155,3 +155,21 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.video-container p {
+  min-height: 5em; /* Adjust this value as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
