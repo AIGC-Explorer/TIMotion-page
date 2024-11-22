@@ -44,7 +44,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Temporal and Interactive Modeling for Efficient Human-Human Motion Generation</h1>
+          <h1 class="title is-1 publication-title">TIMotion: Temporal and Interactive Framework for Efficient Human-Human Motion Generation</h1>
           <!-- <div class="is-size-3 publication-authors">
             UnderReview
           </div> -->
@@ -63,7 +63,7 @@
               <a href="">Jiafu Wu</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="">Zhengkai Jiang</a><sup>2</sup>,
+              <a href="">Zhucun Xue</a><sup>1</sup>,
             </span>
             <span class="author-block">
               <a href="">Yong Liu</a><sup>1</sup>,
@@ -94,7 +94,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/AIGC-Explorer/TIM.git"
+                <a href="https://github.com/AIGC-Explorer/TIMotion.git"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -118,8 +118,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-                Human-human motion generation is essential for understanding humans as social beings.
-                Although several transformer-based methods have been proposed, they typically model each individual separately and overlook the causal relationships in temporal motion sequences. Furthermore, the attention mechanism in transformers exhibits quadratic computational complexity, significantly reducing their efficiency when processing long sequences. In this paper, we introduce TIM (Temporal and Interactive Modeling), an efficient and effective approach that presents the pioneering human-human motion generation model utilizing RWKV. Specifically, we first propose Causal Interactive Injection to leverage the temporal properties of motion sequences and avoid non-causal and cumbersome modeling. Then we present Role-Evolving Mixing to adjust to the ever-evolving roles throughout the interaction. Finally, to generate smoother and more rational motion, we design Localized Pattern Amplification to capture short-term motion patterns. Extensive experiments on InterHuman and InterX demonstrate that our method achieves superior performance. Notably, TIM has achieved state-of-the-art results using only 32% of InterGen's trainable parameters. 
+              Human-human motion generation is essential for understanding humans as social beings. Current methods fall into two main categories: single-person-based methods and separate modeling-based methods. To delve into this field, we abstract the overall generation process into a general framework MetaMotion, which consists of two phases: temporal modeling and interaction mixing. For temporal modeling, the single-person-based methods concatenate two people into a single one directly, while the separate modeling-based methods skip the modeling of interaction sequences. The inadequate modeling described above resulted in sub-optimal performance and redundant model parameters. In this paper, we introduce TIMotion (Temporal and Interactive Modeling), an efficient and effective framework for human-human motion generation. Specifically, we first propose Causal Interactive Injection to model two separate sequences as a causal sequence leveraging the temporal and causal properties. Then we present Role-Evolving Scanning to adjust to the change in the active and passive roles throughout the interaction. Finally, to generate smoother and more rational motion, we design Localized Pattern Amplification to capture short-term motion patterns. Extensive experiments on InterHuman and InterX demonstrate that our method achieves superior performance. The project code will be released upon acceptance.
             </p>
           </div>
         </div>
