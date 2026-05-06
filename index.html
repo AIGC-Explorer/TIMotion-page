@@ -34,10 +34,70 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <style>
+    .project-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1rem;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .project-nav .home-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      color: #4a4a4a;
+      font-size: 1.1rem;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .project-nav .home-icon:hover {
+      color: hsl(204, 86%, 53%);
+      background-color: #dce3f2;
+    }
+
+    .project-nav .nav-link {
+      padding: 0.4rem 0.9rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+      color: #000000;
+      background-color: #ffffff;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .project-nav .nav-link:hover {
+      color: hsl(204, 86%, 53%);
+      font-weight: bold;
+      background-color: #dce3f2;
+    }
+
+    .project-nav .nav-link.is-current {
+      color: hsl(204, 86%, 53%);
+      font-weight: bold;
+      background-color: #dce3f2;
+    }
+  </style>
 </head>
 
 <body>
 
+  <!-- 顶部项目导航 -->
+  <nav class="project-nav" aria-label="project navigation">
+    <a class="home-icon" href="#" aria-label="home">
+      <i class="fas fa-home"></i>
+    </a>
+    <a class="nav-link is-current" href="./index.html">TIMotion</a>
+    <a class="nav-link" href="https://aigc-explorer.github.io/MARRS/">MARRS</a>
+  </nav>
 
   <section class="hero">
     <div class="hero-body">
@@ -73,13 +133,13 @@
                 <a href="">Yong Liu</a><sup>1&#10013</sup>
               </span>
             </div>
-  
+
             <div class="organization">
               <span class="author-block">Zhejiang University<sup>1</sup>, Tencent Youtu Lab<sup>2</sup>, Shanghai Jiao
                 Tong University<sup>3</sup></span>
               <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
             </div>
-  
+
             <div class="Equal contribution">
               <span class="author-block">* Equal contributions</span>
               <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
@@ -213,8 +273,8 @@
         <p>
           <b>We compare against Intergen for human-human motion generation. The synthesized motion by our proposed
             method are more consistent with the description.</b>
-        </p> 
-        <br> 
+        </p>
+        <br>
         <div class="content has-text-centered">
           <video id="replay-video" controls muted preload playsinline width="100%">
             <source src="./static/video/compare_22.mp4#t=0.01" type="video/mp4">
